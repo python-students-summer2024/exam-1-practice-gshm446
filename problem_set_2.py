@@ -30,4 +30,35 @@ def weather_helper():
     2. Do not print anything more than what is requested in the instructions.
     4. The capitalization of the user's responses must not matter to the outcome of the program.
   """
+  temperature=input("Enter current temperature:(in degrees Farenheit): ").lower()
+  temperature_= int(temperature)
+  if not -70<=temperature_<=134:
+    print("Invalid temperature!")
+  if -70<=temperature_<40:
+    snow=input("Is it snowing?").lower()
+    if snow in ["yes", "yeah", "yup"]:
+      jacket=input("Do you wear a warm jacket?").lower()
+      if jacket in ["yes", "yeah", "yup"]:
+        print("Glad to hear you're dressed appropriately!")
+      elif jacket in ["no", "nah", "nope"]:
+        print("What were you thinking when you left home today?!")
+    if snow in ["no", "nah", "nope"]:
+      rain=input("Does it rain? ").lower()
+      if rain in ["yes", "yeah", "yup"]:
+        umbrella=input('Do you take an umbrella?').lower()
+        if umbrella in ["yes", "yeah", "yup"]:
+          print("Good job staying dry!")
+        elif umbrella in ["no", "nah", "nope"]:
+          print("You must enjoy getting wet!")
+  if 134>=temperature_>90:
+    air=input("Do you have a air conditioning?").lower()
+    if air in ["yes", "yeah", "yup"]:
+      print("Stay cool indoors.")
+    elif air in ["no", "nah", "nope"]:
+      print("I hope you have a fan.")
+
+      
+
+
+
 
